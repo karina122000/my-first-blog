@@ -1,13 +1,56 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
 
-        {{ posts }}
-    </body>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Главная </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    
+
+</head>
+<body class="page light-theme">
+  <header class="site-header">
+    <div class="container">
+      <h1>Сайт-визитка</h1>
+
+      <nav class="header_nav">
+        <ul class="header_list">
+          <li class = "header_item">
+            <a href="./post_list.html" class = "header_link"> О себе </a>
+          </li>
+          <li class = "header_item">
+            <a href="./About my group.html" class = "header_link"> О моей группе </a>
+          </li>
+          <li class = "header_item">
+            <a href="./About my faculty.html" class = "header_link"> О факультете </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+    <button class="theme-button" type="button">Изменить тему</button>
+  </header>
+
+  <main class="main">
+
+    <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
+        <div>
+            <p>Опубликовано: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+    
+  </main>
+</body>
 </html>
+
 
