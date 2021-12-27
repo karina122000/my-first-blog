@@ -19,19 +19,19 @@ li {
     width: 500px;
 }
 
-
-
-.content {
-    margin-left: 40px;
+.post {
+    margin-top: 20px;
 }
+
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
+    color: #99441cef;
 }
 
 main {
     padding-left: 24px;
-    width: 100%;
+    margin-right: 50px;
 }
 
 .date {

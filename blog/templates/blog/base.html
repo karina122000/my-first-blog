@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Главная </title>
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="https://karina122000.pythonanywhere.com/"> Блог о моей жизни </a></h1>
+
+      <nav class="header_nav">
+        <ul class="header_list">
+            <li class = "header_item">
+                <a href="" class = "header_link"> Здесь ничего нет! </a>
+            </li>
+
+            <li class = "header_item">
+                <a href="https://karina122000.pythonanywhere.com/admin/" class = "header_link"> Войти </a>
+            </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+        {% block content %}
+        {% endblock %}
+
+    
+  </main>
+
+  <footer class="site-footer">
+          
+    <p>© KStudio, 2021</p>
+    <p>Меня можно найти <a href="https://vk.com/karina_shih"> тут </a></p>
+  
+  </footer>
+
+</body>
+</html>
+
+
