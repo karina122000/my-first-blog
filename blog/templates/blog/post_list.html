@@ -3,53 +3,62 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Главная </title>
+    
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
 </head>
-<body class="page light-theme">
+<body>
   <header class="site-header">
     <div class="container">
-      <h1>Сайт-визитка</h1>
+      <h1><a href="https://karina122000.pythonanywhere.com/"> Блог о моей жизни </a></h1>
 
       <nav class="header_nav">
         <ul class="header_list">
-          <li class = "header_item">
-            <a href="./post_list.html" class = "header_link"> О себе </a>
-          </li>
-          <li class = "header_item">
-            <a href="./About my group.html" class = "header_link"> О моей группе </a>
-          </li>
-          <li class = "header_item">
-            <a href="./About my faculty.html" class = "header_link"> О факультете </a>
-          </li>
+            <li class = "header_item">
+                <a href="" class = "header_link"> Здесь ничего нет! </a>
+            </li>
+
+            <li class = "header_item">
+                <a href="https://karina122000.pythonanywhere.com/admin/" class = "header_link"> Войти </a>
+            </li>
+
         </ul>
       </nav>
 
     </div>
-    <button class="theme-button" type="button">Изменить тему</button>
   </header>
 
   <main class="main">
 
-    <div>
-        <h1><a href="/">Django Girls Blog</a></h1>
-    </div>
 
     {% for post in posts %}
-        <div>
-            <p>Опубликовано: {{ post.published_date }}</p>
+        <div class="post">
+            <div class="date">
+                <p>Опубликовано: {{ post.published_date }}</p>
+            </div>
+
             <h2><a href="">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
     
   </main>
+
+  <footer class="site-footer">
+          
+    <p>© KStudio, 2021</p>
+    <p>Меня можно найти <a href="https://vk.com/karina_shih"> тут </a></p>
+  
+  </footer>
+
 </body>
 </html>
 
