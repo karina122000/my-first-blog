@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, HttpResponseNotFound
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
