@@ -137,7 +137,7 @@ main {
     min-width: 550px;
     background-color: #ff9400;
     color: #ffffff;
-    flex: 0 0 auto;
+    /*flex: 0 0 auto;*/
     text-align: center;
   }
   
