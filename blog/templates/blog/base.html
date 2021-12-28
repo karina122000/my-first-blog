@@ -26,11 +26,13 @@
             </li>
 
             <li class = "header_item">
-              <a href="https://karina122000.pythonanywhere.com/admin/" class = "header_link"> Войти </a>
-          </li>
+                <a href="https://karina122000.pythonanywhere.com/admin/" class = "header_link"> Войти </a>
+            </li>
 
             <li class = "header_item">
-              <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+              {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% endif %} 
             </li>
 
             
