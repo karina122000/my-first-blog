@@ -63,6 +63,10 @@ main {
     color: #000000;
 }
 
+.post h2 {
+    color: #99441cef;
+}
+
 
 /*.light-theme h1 {
     width: 400px;
@@ -125,7 +129,11 @@ main {
 
   }
 
-  .site-footer {
+.site-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     min-width: 550px;
     background-color: #ff9400;
     color: #ffffff;
